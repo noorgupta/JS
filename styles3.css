@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+
+    /* animated gradient background */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+}
+
+/* gradient animation */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* input fields with glass look */
+input[type="number"] {
+    padding: 12px 15px;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    width: 250px;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1em;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition: all 0.3s ease;
+}
+
+input[type="number"]::placeholder {
+    color: #e0e0e0;
+}
+
+input[type="number"]:focus {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 12px rgba(255,255,255,0.5);
+}
+
+/* button with gradient + hover */
+button {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 15px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+}
